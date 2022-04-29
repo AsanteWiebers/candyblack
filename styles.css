@@ -1,0 +1,8 @@
+:root {
+    --primary-clr-grey: #a6a6a6;
+    --primary-clr-black: #000;
+
+    --heading-serif: 'Cormorant Garamond', serif;
+    --body-serif: 'Barlow Semi Condensed', sans-serif;
+    --body2-serif: 'Quicksand', sans-serif;
+}
