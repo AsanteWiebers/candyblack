@@ -15,6 +15,7 @@
     --fs-400: 1.125rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
+    --fs-100: 0.675rem;
 }
 
 *,
@@ -64,10 +65,37 @@ body {
 .text-grey {
     color: var(--primary-clr-grey);
 }
+
+.text-black {
+    color: var(--primary-clr-black);
+}
+
 .ff-heading {
     font-family: var(--heading-serif);
 }
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+.fs-300 {
+    font-size: var(--fs-300);
+}
+.fs-200 {
+    font-size: var(--fs-200);
+}
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
 /* navigation */
+
+.nav__list_bg {
+    display: none;
+}
 
 nav {
     display: flex;
@@ -82,7 +110,7 @@ nav {
 .nav__bg {
     display: none;
     position: absolute;
-    background-color: #FFF;
+    background-color: var(--primary-clr-white);
     height: 100vh;
     width: 100%;
     z-index: 10;
@@ -160,43 +188,71 @@ footer {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-width: 1024px) {
+    .nav__list_bg {
+        display: none;
+    }
+    /* nav {
+        display: flex;
+        box-shadow: none;
+    } */
 
-   .logo {
-       display: none;
-   } 
+    .logo {
+        position: absolute;
+        right: 20px;
+        border: 1px solid blue;
+    }
+   
 
-  .hamburger {
-      display: none;
-  }  
+    .hamburger {
+        display: none;
+    }  
 
-  .hero__title {
-      border: 1px solid red;
-      max-width: 250px;
-  }
-
-  .container {
-    margin: 0 auto;
-    padding: 0 3em;
-  }
-
-  .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 3em;
-  }
-
-  .grid-items {
-    object-fit: cover;
-    height: 500px;
-    max-height: max-content;
-    width: 100%;
+    .hero__title {
+        border: 1px solid red;
+        max-width: 250px;
     }
 
-    footer {
-       
+    .container {
+        margin: 0 auto;
+        padding: 0 3em;
     }
 
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3em;
+    }
 
+    .grid-items {
+        object-fit: cover;
+        height: 500px;
+        max-height: max-content;
+        width: 100%;
+        }
 
+}
+
+@media(min-width:1025px){
+
+    .container {
+        margin: 0 auto;
+        padding: 0 7em;
+    }
+
+    nav {
+        box-shadow: none;
+        border: 1px solid red;
+        padding: 5em 7em;
+    }
+
+    .nav__list_bg {
+        display: flex;
+        
+    }
+
+    .nav_links_bg {
+        margin: 0 15px 0 0 ;
+        letter-spacing: 5px;
+    }
 }
