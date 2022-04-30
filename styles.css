@@ -43,16 +43,21 @@ li {
 
 body {
     font-size: var(--fs-400);
+    font-family: var(--body-serif);
     overflow-x: hidden;
 }
 
 .container {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 1.7em;
 }
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.text-grey {
+    color: var(--primary-clr-grey);
 }
 .ff-heading {
     font-family: var(--heading-serif);
@@ -61,7 +66,7 @@ body {
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     height: 10vh;
     position: fixed;
@@ -71,6 +76,12 @@ nav {
 
 .nav__list {
     display: none;
+}
+
+.hamburger {
+    top: 25px;
+    left: 25px;
+    position: relative;
 }
 
 .logo {
@@ -98,13 +109,27 @@ nav {
 
 .grid-container {
     display: grid;
-    flex-direction: column;
-    /* grid-template-columns: repeat(14,1fr); */
     gap: 2em;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .grid-items {
-    width: 100%;
+    object-fit: cover;
+    max-height:100%;
+    max-width: 100%;
+}
+
+footer {
+    margin: 3em 0 0 ;
+}
+.socials_list {
+    padding: 3em 0 ;
+}
+.social__link {
+    float: left;
+    width: 50px;
+}
+
+.fa-brands:hover {
+    color: var(--primary-clr-grey);
+    cursor: pointer;
 }
