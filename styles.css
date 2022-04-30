@@ -47,6 +47,11 @@ body {
     overflow-x: hidden;
 }
 
+.flex {
+    display: flex;
+    gap: 3em;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 1.7em;
@@ -74,14 +79,35 @@ nav {
     width: 100%;
 }
 
-.nav__list {
+.nav__bg {
     display: none;
+    position: absolute;
+    background-color: #FFF;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav_links {
+    margin: 1em auto;
+    text-align: center;
+    letter-spacing: .2em;
+    line-height: 3.5em;
+    font-weight: 400;
 }
 
 .hamburger {
+    display: block;
     top: 25px;
     left: 25px;
     position: relative;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
 
 .logo {
@@ -132,4 +158,45 @@ footer {
 .fa-brands:hover {
     color: var(--primary-clr-grey);
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+   .logo {
+       display: none;
+   } 
+
+  .hamburger {
+      display: none;
+  }  
+
+  .hero__title {
+      border: 1px solid red;
+      max-width: 250px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 3em;
+  }
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 3em;
+  }
+
+  .grid-items {
+    object-fit: cover;
+    height: 500px;
+    max-height: max-content;
+    width: 100%;
+    }
+
+    footer {
+       
+    }
+
+
+
 }
